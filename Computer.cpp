@@ -22,8 +22,8 @@ Computer &Computer::randomOther() {
     int otherId;
 
     do {
-        otherId = rand() % Globals::num_computers;
-    } while (otherId != id);
+        otherId = Globals::mt() % Globals::num_computers;
+    } while (otherId == id);
 
     return Globals::computers[otherId];
 }

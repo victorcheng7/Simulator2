@@ -1,11 +1,12 @@
 #include <assert.h>
 
-#include <iostream>
-#include <list>
 #include <cstdio>
 #include <cstdlib>
-#include<queue>
 #include <ctime>
+#include <iostream>
+#include <list>
+#include <queue>
+#include <random>
 
 #include "Computer.h"
 #include "EventQueue.h"
@@ -14,115 +15,57 @@
 using namespace Globals;
 using namespace std;
 
-int main() {
+int main(int argc, char **argv) {
+  random_device dev;
 
-//CHANGE THIS TO COMMAND LINE ARGUMENTS
+  mt.seed(dev());
 
-    cout << "Enter the number of computers in simulation" << endl;
-    cin >> num_computers;
-    cout << "Enter chance of successful attack (0-100)" << endl;
-    cin >> perc_success;
-    cout << "Enter chance of detection" << endl;
-    cin >> perc_detect;
+  if (argc < 4) {
+    cout << "Usage: " << argv[0]
+         << " <num_computers> <perc_success> <perc_detect>" << endl;
 
-    // rough gauge on optimizing how many events I should already have in my EventQueue, so I can minimize number of resizes.
-    EventQueue events(num_computers);
+    return 1;
+  }
 
-    int time_sim = 0; // time during the simulation
+  num_computers = stoi(argv[1]);
+  perc_success = stoi(argv[2]);
+  perc_detect = stoi(argv[3]);
 
-    computers = new Computer[num_computers]; //List of computers in network
+  int sim_time = 0; // time during the simulation
 
-    // creating computers
-    for (int j = 0; j < num_computers / 2; j++) computers[j] = Computer(j, 1, false);
-    for (int k = num_computers / 2; k < num_computers; k++) computers[k] = Computer(k, 2, false);
+  computers = new Computer[num_computers]; // List of computers in network
 
-    // seed rand() with the current time
-    srand(static_cast<unsigned int>(time(NULL)));
+  // creating computers
+  for (int j = 0; j < num_computers / 2; j++)
+    computers[j] = Computer(j, 1, false);
+  for (int k = num_computers / 2; k < num_computers; k++)
+    computers[k] = Computer(k, 2, false);
 
-    // start off simulation by infecting a random computer
-    events.addEvent(*new AttackerAttack(time_sim + 11, &computers[rand() % num_computers]));
+  // seed z with the current time
+  srand(static_cast<unsigned int>(time(NULL)));
 
-    while (!sim_state) {
-        time_sim = events.array[1]->time;
+  // start off simulation by infecting a random computer
+  events.addEvent(
+      *new AttackerAttack(sim_time + 11, &computers[mt() % num_computers]));
 
-        if (time_sim >= 8640000)
-            sim_state = Draw;
-        else
-            events.executeEvent(time_sim);
+  while (!sim_state) {
+    sim_time = events.first()->eventTime();
 
-//        //Infected computers and attacker ATTACK EVENTS added onto EventQueue
-//        if (time_sim % 10) {
-//            int computer_attack_id;
-//            if (time_sim != 0) {
-//                int attack_chance = rand() % 101;
-//                if (attack_chance < perc_success) {
-//                    //attacker infects random computer
-//                    cout << "Attack( A, " << time_sim << ", " << computer_attack_id << ") SUCCESS" << endl;
-//
-//                    int computer_attack_id = rand() % computers;
-//                    AttackerAttack attack(time_sim + 11, &computers[computer_attack_id]);
-//                    events.addEvent(attack);
-//                } else {
-//                    cout << "Attack( A, " << time_sim << ", " << computer_attack_id << ")" << "FAILED" << endl;
-//                }
-//            }
-//
-//            //Loop through all infected computers and infect others
-//            for (int i = 0; i < computers; i++) {
-//                if (computers[i].infected == true) {
-//                    int rollerSuccessAttack = rand() % 101;
-//                    if (rollerSuccessAttack < perc_success) {
-//                        computer_attack_id = rand() % computers;
-//                        while (computer_attack_id == computers[i].id) {
-//                            computer_attack_id = rand() % computers;
-//                        }
-//                        //Add attack onto Eventqueue
-//                        ComputerAttack attack(time_sim + 11, &computers[i],
-//                                               &computers[computer_attack_id]);
-//                        events.addEvent(attack);
-//                        cout << "Attack(" << time_sim << ", " << computers[i].id << ", " << computer_attack_id
-//                             << ") SUCCESS" << endl;
-//                    } else {
-//                        cout << "Attack(" << time_sim << ", " << computers[i].id << ")" << "FAILED" << endl;
-//                    }
-//                }
-//            }
-//        }
-//
-//        while (time_sim == events.array[1]->time) {
-//            events.executeEvent(time_sim);
-//        }
-//
-//        if (checkFixQueue(time_sim)) {
-//            Computer *tempComp = fixes.front().computer;
-//            fixes.pop();
-//            tempComp->infected = false;
-//            cout << "Fix(" << time_sim << ", " << tempComp->id << ")" << endl;
-//
-//            num_fixes--;
-//            num_infected--;
-//        }
-//
-//        time_sim++;
-    }
+    if (sim_time >= 8640000)
+      sim_state = Draw;
+    else
+      events.executeEvent(sim_time);
+  }
 
-    switch (sim_state) {
-        case AttackerWon:
-            cout << "Attacker wins";
-            break;
-        case Draw:
-            cout << "Draw";
-            break;
-        case SysadminWon:
-            cout << "Sysadmin wins";
-            break;
-        default:
-            assert(false);
-            break;
-    }
+  switch (sim_state) {
+  case AttackerWon: cout << "Attacker wins"; break;
+  case Draw: cout << "Draw"; break;
+  case SysadminWon: cout << "Sysadmin wins"; break;
+  default: assert(false); break;
+  }
 
-    cout << endl;
+  cout << endl;
 
-    delete computers;
-    return 0;
+  delete computers;
+  return 0;
 }

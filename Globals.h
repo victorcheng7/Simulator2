@@ -6,6 +6,7 @@
 #define NETWORKSIMULATOR_GLOBALS_H
 
 #include <queue>
+#include <random>
 
 #include "Computer.h"
 
@@ -27,6 +28,8 @@ namespace Globals {
     extern bool fixInProgress;
 
     extern SimState sim_state;
+
+    extern std::mt19937_64 mt;
 
     extern Computer *computers;
 

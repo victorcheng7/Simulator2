@@ -10,7 +10,7 @@ class Computer {
 public:
     int id;
     int subnet;
-    bool infected;
+    bool infected, fixPending = false;
 
     Computer(int t_id, int t_subnet, bool t_infected);
 

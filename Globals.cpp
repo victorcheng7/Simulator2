@@ -15,6 +15,8 @@ namespace Globals {
 
     SimState sim_state = Running;
 
+    std::mt19937_64 mt;
+
     Computer *computers;
 
     EventQueue events;

@@ -18,14 +18,18 @@ using namespace std;
 
 //Below are all possible events that can be added to the Priority Queue
 class Event {
+    int time;
+
 public:
     Event(int p_time);
 
     Event() = default;
 
-    int time;
+    int eventTime() const;
 
-    virtual void execute(int time_sim) = 0;
+    virtual void execute(int sim_time) = 0;
+
+    friend class EventQueue;
 };
 
 class Attack : public Event {
@@ -45,7 +49,7 @@ public:
 
     Attack(int p_time, Computer *p_target);
 
-    virtual void execute(int time_sim) override;
+    virtual void execute(int sim_time) override;
 };
 
 class ComputerAttack : public Attack {
@@ -90,22 +94,24 @@ public:
 
     Notify(int p_time, Computer *p_target);
 
-    virtual void execute(int time_sim) override;
+    virtual void execute(int sim_time) override;
 };
 
 class EventQueue {
-public:
-    // use an array and resize array
-    //friend Event** array;
     Event **array;
     int max_size;
     int size_array;
 
+public:
     EventQueue(int initial_size);
 
     EventQueue();
 
     ~EventQueue();
+
+    int size() const;
+
+    Event *first() const;
 
     void percolateUp(int index);
 
@@ -117,7 +123,7 @@ public:
 
     void addEvent(Event &event);
 
-    void executeEvent(int time_sim);
+    void executeEvent(int sim_time);
 
     void resize(int size_array);
 };
