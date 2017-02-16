@@ -117,7 +117,7 @@ void Fix::execute(int sim_time) {
     target->infected = false;
     --Globals::num_infected;
 
-    assert(Globals::num_infected >= 0);
+    //assert(Globals::num_infected >= 0);
     if (Globals::num_infected == 0) Globals::sim_state = Globals::SysadminWon;
   }
 
@@ -184,7 +184,7 @@ EventQueue::~EventQueue() {
 int EventQueue::size() const { return size_array; }
 
 Event *EventQueue::first() const {
-  assert(size_array > 0);
+  //assert(size_array > 0);
   return array[1];
 }
 
@@ -210,7 +210,7 @@ void EventQueue::addEvent(Event &event) {
 }
 
 void EventQueue::executeEvent(int sim_time) {
-  assert(size_array > 0);
+  //assert(size_array > 0);
 
   // execute top node of the array, delete top node, subtract 1 size from heap,
   // remake the heap so it maintains heap structure
@@ -237,11 +237,11 @@ void EventQueue::decrementKey(int index, unsigned int deltaTime) {
 }
 
 void EventQueue::percolateUp(int index) {
-  assert(size_array >= 0);
+  //assert(size_array >= 0);
 
   if (!size_array) return;
 
-  assert(index >= 1);
+  //assert(index >= 1);
 
   while (true) {
     if (index / 2 < 1) break;
@@ -256,11 +256,11 @@ void EventQueue::percolateUp(int index) {
 }
 
 void EventQueue::percolateDown(int index) {
-  assert(size_array >= 0);
+  //assert(size_array >= 0);
 
   if (!size_array) return;
 
-  assert(index <= size_array);
+  //assert(index <= size_array);
 
   while (true) {
     int child = index * 2;

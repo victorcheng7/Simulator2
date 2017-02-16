@@ -38,8 +38,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="NetworkSimulator">
-				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -59,8 +59,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="NetworkSimulator/fast">
-				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>

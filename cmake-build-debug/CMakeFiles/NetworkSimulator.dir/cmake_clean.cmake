@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o"
   "CMakeFiles/NetworkSimulator.dir/Computer.cpp.o"
   "CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
-  "NetworkSimulator.pdb"
-  "NetworkSimulator.exe"
+  "../bin/NetworkSimulator.pdb"
+  "../bin/NetworkSimulator.exe"
   "libNetworkSimulator.dll.a"
 )
 

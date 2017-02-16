@@ -16,6 +16,8 @@ using namespace Globals;
 using namespace std;
 
 int main(int argc, char **argv) {
+// To compile g++ -std=c++11 -o main main.cpp Globals.cpp Computer.cpp EventQueue.cpp
+
   random_device dev;
 
   mt.seed(dev());
@@ -56,6 +58,7 @@ int main(int argc, char **argv) {
     else
       events.executeEvent(sim_time);
   }
+
 
   switch (sim_state) {
   case AttackerWon: cout << "Attacker wins"; break;
