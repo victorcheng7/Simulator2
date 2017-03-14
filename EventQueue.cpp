@@ -113,10 +113,11 @@ void buildMST::execute(int sim_time){
 
     bool check1 = buildAndPrintUnOptimal();
     bool check2 = buildAndPrintOptimal();
-
-    if(check2) {
+/*
+    if(check2){
         printMST1();
     }
+    */
     isRebuild = false;
 
 }

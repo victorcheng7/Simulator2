@@ -97,7 +97,7 @@ namespace Globals {
     }
 
 
-    bool buildAndPrintUnOptimal(int ** edges){
+    bool buildAndPrintOptimal(){
         min_priority_queue<Edge> queue;
         for (int i = 0; i < num_nodes; i++) {
             for(int k = 0; k < i; k++){
@@ -121,7 +121,10 @@ namespace Globals {
                 unionFind.join(edge.firstNode, edge.secondNode);
             }
         }
-        cout << "Total cost of MST with MST - Unoptimal: " << sum << endl;
+        if(sum == 0){
+            cout << "Cannot build a Spanning tree from and can't calculate cost because the graph is not connected. (Disjoint sets)" << endl;
+        }
+        cout << "Total cost of MST with MST - Optimal: " << sum << endl;
 
         if(unionFind.rootCount() > 1){
             return false;
@@ -214,7 +217,7 @@ namespace Globals {
     }
 
 
-    bool buildAndPrintOptimal(){
+    bool buildAndPrintUnOptimal(){
         //Create priority_queue of Edge objects
         min_priority_queue<Edge> queue;
         for (int i = 0; i < num_nodes; i++) {
@@ -238,7 +241,10 @@ namespace Globals {
                 unionFind.join(edge.firstNode, edge.secondNode);
             }
         }
-        cout << "Total cost of MST with original graph - Optimal: " << sum << endl;
+        if(sum == 0){
+            cout << "Cannot build a Spanning tree from and can't calculate cost because the graph is not connected. (Disjoint sets)" << endl;
+        }
+        cout << "Total cost of MST with original graph - Unoptimal: " << sum << endl;
 
         //cout << "Root count in MST: " << unionFind.rootCount() << endl;
 
