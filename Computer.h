@@ -9,14 +9,12 @@ class Computer {
 //operator overload for computers
 public:
     int id;
-    int subnet;
-    bool infected, fixPending = false;
+    // O(1) MEMBERSHIP LOOKUP. Hashtable to check if computer is already fixpending
+    bool infected = false, fixPending = false;
 
-    Computer(int t_id, int t_subnet, bool t_infected);
+    Computer(int t_id);
 
     Computer() = default;
-
-    Computer &randomOther();
 };
 
 class ComputerFix {

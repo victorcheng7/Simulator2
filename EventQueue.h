@@ -32,17 +32,20 @@ public:
     friend class EventQueue;
 };
 
+
+
+
 class Attack : public Event {
 protected:
-    virtual bool canAttack();
 
-    virtual bool canDetect();
+    virtual void print() = 0;
 
-    virtual void notify(int newtime);
-
-    virtual void print(bool success, bool detect) = 0;
+    virtual void launchFix(int p_time, Computer* p_target) = 0;
 
     virtual void relaunch(int newtime) = 0;
+
+    virtual void launchMSTRebuild(int p_time) = 0;
+
 
 public:
     Computer *target;
@@ -50,32 +53,23 @@ public:
     Attack(int p_time, Computer *p_target);
 
     virtual void execute(int sim_time) override;
+
+
 };
 
-class ComputerAttack : public Attack {
-protected:
-    virtual bool canAttack() override;
 
-    virtual bool canDetect() override;
-
-    virtual void notify(int newtime) override;
-
-    virtual void print(bool success, bool detect) override;
-
-    virtual void relaunch(int newtime) override;
-public:
-    ComputerAttack(int p_time, Computer *p_source, Computer *p_target);
-
-    Computer *source;
-};
 
 class AttackerAttack : public Attack {
-    virtual void print(bool success, bool detect) override;
+    virtual void print() override;
 
     virtual void relaunch(int newtime) override;
+    virtual void launchFix(int p_time, Computer* p_target) override;
+    virtual void launchMSTRebuild(int p_time);
 public:
     AttackerAttack(int p_time, Computer *p_target);
 };
+
+
 
 class Fix : public Event {
 public:
@@ -84,18 +78,22 @@ public:
     Fix(int p_time, Computer *p_target);
 
     virtual void execute(int sim_time) override;
+
+    void launchMSTRebuild(int p_time);
+
 };
 
-class Notify : public Event {
+
+class buildMST : public Event {
+
 public:
-    Computer *source, *target;
-
-    Notify(int p_time, Computer *p_source, Computer *p_target);
-
-    Notify(int p_time, Computer *p_target);
+    buildMST(int p_time);
 
     virtual void execute(int sim_time) override;
+
 };
+
+//EventQueue
 
 class EventQueue {
     Event **array;

@@ -6,27 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp
 random
 -
 Computer.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
 Globals.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp
 assert.h
 -
 utility
 -
+iomanip
+-
 EventQueue.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.h
 Globals.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
+UnionFind.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.h
 iostream
 -
 string
@@ -36,23 +40,41 @@ queue
 list
 -
 Computer.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp
 EventQueue.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.h
 Globals.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
+UnionFind.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
 queue
 -
 random
 -
+unordered_set
+-
+iomanip
+-
 Computer.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
+UnionFind.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
 
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp
+UnionFind.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
+Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
+
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
+Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
+
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp
 assert.h
 -
 cstdio
@@ -60,6 +82,8 @@ cstdio
 cstdlib
 -
 ctime
+-
+iomanip
 -
 iostream
 -
@@ -70,9 +94,11 @@ queue
 random
 -
 Computer.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h
 EventQueue.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.h
 Globals.h
-/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h
+UnionFind.h
+/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h
 

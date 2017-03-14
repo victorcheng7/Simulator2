@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp" "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/Computer.cpp.o"
-  "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp" "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o"
-  "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp" "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
-  "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp" "/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/main.cpp.o"
+  "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp" "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/Computer.cpp.o"
+  "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp" "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o"
+  "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp" "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
+  "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp" "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o"
+  "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp" "/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

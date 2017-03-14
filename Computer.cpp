@@ -12,18 +12,6 @@ ComputerFix::ComputerFix(int p_time, Computer *p_computer) {
     computer = p_computer;
 }
 
-Computer::Computer(int t_id, int t_subnet, bool t_infected) {
+Computer::Computer(int t_id) {
     id = t_id;
-    subnet = t_subnet;
-    infected = t_infected;
 };
-
-Computer &Computer::randomOther() {
-    int otherId;
-
-    do {
-        otherId = Globals::mt() % Globals::num_computers;
-    } while (otherId == id);
-
-    return Globals::computers[otherId];
-}

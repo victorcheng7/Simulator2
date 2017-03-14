@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/Victor/.CLion2016.3/system/cygwin_cmake/bin/cmake.exe -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/Victor/ClionProjects/Simulator_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ Globals.cpp.s:
 	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/Globals.cpp.s
 .PHONY : Globals.cpp.s
 
+UnionFind.o: UnionFind.cpp.o
+
+.PHONY : UnionFind.o
+
+# target to build an object file
+UnionFind.cpp.o:
+	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o
+.PHONY : UnionFind.cpp.o
+
+UnionFind.i: UnionFind.cpp.i
+
+.PHONY : UnionFind.i
+
+# target to preprocess a source file
+UnionFind.cpp.i:
+	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.i
+.PHONY : UnionFind.cpp.i
+
+UnionFind.s: UnionFind.cpp.s
+
+.PHONY : UnionFind.s
+
+# target to generate assembly for a file
+UnionFind.cpp.s:
+	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.s
+.PHONY : UnionFind.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -249,6 +276,9 @@ help:
 	@echo "... Globals.o"
 	@echo "... Globals.i"
 	@echo "... Globals.s"
+	@echo "... UnionFind.o"
+	@echo "... UnionFind.i"
+	@echo "... UnionFind.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

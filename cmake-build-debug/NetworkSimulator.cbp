@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NetworkSimulator">
-				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin"/>
+				<Option output="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 NetworkSimulator"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 NetworkSimulator"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NetworkSimulator/fast">
-				<Option output="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/bin"/>
+				<Option output="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/bin/NetworkSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,35 +73,41 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 NetworkSimulator/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 NetworkSimulator/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.h">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.h">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.h">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.h">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.h">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.h">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp">
 			<Option target="NetworkSimulator"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/CMakeLists.txt">
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.h">
+			<Option target="NetworkSimulator"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp">
+			<Option target="NetworkSimulator"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

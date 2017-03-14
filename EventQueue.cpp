@@ -1,170 +1,131 @@
-//
+
 // Created by Victor on 2/3/2017.
 //
 
 #include <assert.h>
 
 #include <utility>
+#include <iomanip>
 
 #include "EventQueue.h"
 #include "Globals.h"
+#include "UnionFind.h"
 
+using namespace Globals;
+
+
+// Event Class Superclass
 Event::Event(int p_time) : time(p_time) {}
 
 int Event::eventTime() const { return time; }
 
+
+//Attack class Superclass to all types of attacks
 Attack::Attack(int p_time, Computer *p_target)
     : Event(p_time), target(p_target) {}
 
-bool Attack::canAttack() { return true; }
-
-bool Attack::canDetect() { return true; }
-
-void Attack::notify(int newtime) {
-  Globals::events.addEvent(*new Notify(newtime, target));
-}
 
 void Attack::execute(int sim_time) {
-  if (!canAttack()) return;
 
-  bool success = Globals::mt() % 100 < Globals::perc_success,
-       detect = Globals::mt() % 100 < Globals::perc_detect;
+    Globals::num_attacks++;
 
-  print(success, detect);
+    print();
 
-  if (success) {
     if (!target->infected) {
-      target->infected = true;
-      ++Globals::num_infected;
-
-      Globals::events.addEvent(
-          *new ComputerAttack(sim_time + 10, target, &target->randomOther()));
-
-      if (Globals::num_infected >= Globals::num_computers / 2)
-        Globals::sim_state = Globals::AttackerWon;
+        Globals::num_infected++;
+        target->infected = true;
+        Globals::infected.insert(target->id);
     }
-  }
+        relaunch(sim_time + Globals::randomAttackTime(Globals::mt));
 
-  if (detect) notify(sim_time + 1);
+    if(num_sysadmin > 0){
+        launchFix(sim_time + Globals::randomFixTime(Globals::mt), target);
+        num_sysadmin--;
+    }
+    else{
+        fixes.push(target);
+    }
 
-  relaunch(eventTime() + 10);
+    if(!isRebuild){
+        launchMSTRebuild(sim_time + 20);
+        isRebuild = true;
+    }
+
 }
 
-ComputerAttack::ComputerAttack(int p_time, Computer *p_source,
-                               Computer *p_target)
-    : Attack(p_time, p_target), source(p_source) {}
-
-bool ComputerAttack::canAttack() { return source->infected; }
-
-bool ComputerAttack::canDetect() { return source->subnet != target->subnet; }
-
-void ComputerAttack::notify(int newtime) {
-  Globals::events.addEvent(*new Notify(newtime, source, target));
-}
-
-void ComputerAttack::print(bool success, bool detect) {
-  cout << "Attack(" << eventTime() << ", " << source->id << ", " << target->id
-       << ") ";
-
-  if (success)
-    cout << "SUCCESS";
-  else
-    cout << "FAIL   ";
-
-  if (detect)
-    cout << "DETECT";
-  else
-    cout << "      ";
-
-  cout << " " << Globals::num_infected << endl;
-}
-
-void ComputerAttack::relaunch(int newtime) {
-  Globals::events.addEvent(
-      *new ComputerAttack(newtime, source, &source->randomOther()));
-}
 
 AttackerAttack::AttackerAttack(int p_time, Computer *p_target)
     : Attack(p_time, p_target) {}
 
-void AttackerAttack::print(bool success, bool detect) {
-  cout << "Attack(" << eventTime() << ", ATKR, " << target->id << ") ";
+void AttackerAttack::print() {
+  cout << "Attack(" << eventTime() << ", ATKR, " << target->id << ") " << endl;
 
-  if (success)
-    cout << "SUCCESS";
-  else
-    cout << "FAIL   ";
-
-  if (detect)
-    cout << "DETECT";
-  else
-    cout << "      ";
-
-  cout << " " << Globals::num_infected << endl;
+  cout << "Number of infected nodes: " << Globals::num_infected << endl;
 }
 
 void AttackerAttack::relaunch(int newtime) {
   Globals::events.addEvent(*new AttackerAttack(
-      newtime, &Globals::computers[Globals::mt() % Globals::num_computers]));
+      newtime, &Globals::computers[Globals::mt() % Globals::num_nodes]));
+}
+void AttackerAttack::launchFix(int p_time, Computer *p_target){
+    Globals::events.addEvent(*new Fix(p_time + randomFixTime(mt), p_target));
+}
+void AttackerAttack::launchMSTRebuild(int p_time){
+    Globals::events.addEvent(*new buildMST(p_time + 20));
 }
 
+
+
+//Fix class, used for spawning fixes in Eventqueue
 Fix::Fix(int p_time, Computer *p_target) : Event(p_time), target(p_target) {}
 
 void Fix::execute(int sim_time) {
   cout << "Fix(" << sim_time << ", " << target->id << ")" << endl;
 
-  if (target->infected) {
-    target->infected = false;
-    --Globals::num_infected;
-
-    //assert(Globals::num_infected >= 0);
-    if (Globals::num_infected == 0) Globals::sim_state = Globals::SysadminWon;
-  }
-
-  target->fixPending = false;
-
-  if (Globals::fixes.size()) {
-    Globals::events.addEvent(*new Fix(sim_time + 100, Globals::fixes.front()));
-    Globals::fixes.pop();
-  } else
-    Globals::fixInProgress = false;
-}
-
-Notify::Notify(int p_time, Computer *p_source, Computer *p_target)
-    : Event(p_time) {
-  source = p_source;
-  target = p_target;
-}
-
-Notify::Notify(int p_time, Computer *p_target)
-    : Notify(p_time, nullptr, p_target) {}
-
-void Notify::execute(int sim_time) {
-  cout << "Notify(" << sim_time << ", ";
-
-  if (source != nullptr) {
-    cout << source->id << ", ";
-
-    if (!source->fixPending) {
-      Globals::fixes.push(source);
-      source->fixPending = true;
+    if(target->infected){
+        target -> infected = false;
+        --Globals::num_infected;
+        num_sysadmin++;
+        infected.erase(target->id);
     }
-  }
+    target->fixPending = false;
 
-  cout << target->id << ")" << endl;
+    if(!isRebuild){
+        launchMSTRebuild(sim_time + 20);
+        isRebuild = true;
+    }
 
-  if (!target->fixPending) {
-    Globals::fixes.push(target);
-    target->fixPending = true;
-  }
-
-  if (!Globals::fixInProgress) {
-    Globals::events.addEvent(*new Fix(sim_time + 101, Globals::fixes.front()));
-    Globals::fixes.pop();
-
-    Globals::fixInProgress = true;
-  }
 }
+void Fix::launchMSTRebuild(int p_time){
+    Globals::events.addEvent(*new buildMST(p_time+20));
+}
+
+
+
+
+
+buildMST::buildMST(int p_time) : Event(p_time){}
+
+void buildMST::execute(int sim_time){
+    cout << "Rebuild_spanning_tree(" << sim_time << ")" << endl;
+
+    //Check if the graph is partitioned, schedule a fix event.
+
+    bool check1 = buildAndPrintUnOptimal();
+    bool check2 = buildAndPrintOptimal();
+
+    if(check2) {
+        printMST1();
+    }
+    isRebuild = false;
+
+}
+
+
+
+//EventQueue implementation
+
+
 
 EventQueue::EventQueue(int initial_size) {
   size_array = 0;

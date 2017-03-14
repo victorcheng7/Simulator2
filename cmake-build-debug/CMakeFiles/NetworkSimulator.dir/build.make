@@ -43,10 +43,10 @@ RM = /cygdrive/c/Users/Victor/.CLion2016.3/system/cygwin_cmake/bin/cmake.exe -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/Victor/ClionProjects/Simulator_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/NetworkSimulator.dir/depend.make
@@ -57,18 +57,42 @@ include CMakeFiles/NetworkSimulator.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NetworkSimulator.dir/flags.make
 
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.o: ../Globals.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/Globals.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp
+
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/Globals.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp > CMakeFiles/NetworkSimulator.dir/Globals.cpp.i
+
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/Globals.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Globals.cpp -o CMakeFiles/NetworkSimulator.dir/Globals.cpp.s
+
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires:
+
+.PHONY : CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
+
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
+	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides.build
+.PHONY : CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides
+
+CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides.build: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o
+
+
 CMakeFiles/NetworkSimulator.dir/main.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
 CMakeFiles/NetworkSimulator.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NetworkSimulator.dir/main.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/main.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NetworkSimulator.dir/main.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/main.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp
 
 CMakeFiles/NetworkSimulator.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/main.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp > CMakeFiles/NetworkSimulator.dir/main.cpp.i
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp > CMakeFiles/NetworkSimulator.dir/main.cpp.i
 
 CMakeFiles/NetworkSimulator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/main.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/main.cpp -o CMakeFiles/NetworkSimulator.dir/main.cpp.s
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/main.cpp -o CMakeFiles/NetworkSimulator.dir/main.cpp.s
 
 CMakeFiles/NetworkSimulator.dir/main.cpp.o.requires:
 
@@ -83,16 +107,16 @@ CMakeFiles/NetworkSimulator.dir/main.cpp.o.provides.build: CMakeFiles/NetworkSim
 
 CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
 CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o: ../EventQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp
 
 CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp > CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.i
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp > CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.i
 
 CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/EventQueue.cpp -o CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.s
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/EventQueue.cpp -o CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.s
 
 CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o.requires:
 
@@ -107,16 +131,16 @@ CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o.provides.build: CMakeFiles/Netw
 
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.o: ../Computer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NetworkSimulator.dir/Computer.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/Computer.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NetworkSimulator.dir/Computer.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/Computer.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp
 
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/Computer.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp > CMakeFiles/NetworkSimulator.dir/Computer.cpp.i
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp > CMakeFiles/NetworkSimulator.dir/Computer.cpp.i
 
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/Computer.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Computer.cpp -o CMakeFiles/NetworkSimulator.dir/Computer.cpp.s
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/Computer.cpp -o CMakeFiles/NetworkSimulator.dir/Computer.cpp.s
 
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.o.requires:
 
@@ -129,47 +153,49 @@ CMakeFiles/NetworkSimulator.dir/Computer.cpp.o.provides: CMakeFiles/NetworkSimul
 CMakeFiles/NetworkSimulator.dir/Computer.cpp.o.provides.build: CMakeFiles/NetworkSimulator.dir/Computer.cpp.o
 
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.o: ../Globals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/Globals.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o: CMakeFiles/NetworkSimulator.dir/flags.make
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o: ../UnionFind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o -c /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/Globals.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp > CMakeFiles/NetworkSimulator.dir/Globals.cpp.i
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp > CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.i
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/Globals.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/Globals.cpp -o CMakeFiles/NetworkSimulator.dir/Globals.cpp.s
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/UnionFind.cpp -o CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.s
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires:
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.requires:
 
-.PHONY : CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
+.PHONY : CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.requires
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
-	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides.build
-.PHONY : CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.provides: CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.requires
+	$(MAKE) -f CMakeFiles/NetworkSimulator.dir/build.make CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.provides.build
+.PHONY : CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.provides
 
-CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.provides.build: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o
+CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.provides.build: CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o
 
 
 # Object files for target NetworkSimulator
 NetworkSimulator_OBJECTS = \
+"CMakeFiles/NetworkSimulator.dir/Globals.cpp.o" \
 "CMakeFiles/NetworkSimulator.dir/main.cpp.o" \
 "CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o" \
 "CMakeFiles/NetworkSimulator.dir/Computer.cpp.o" \
-"CMakeFiles/NetworkSimulator.dir/Globals.cpp.o"
+"CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o"
 
 # External object files for target NetworkSimulator
 NetworkSimulator_EXTERNAL_OBJECTS =
 
+../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o
 ../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/main.cpp.o
 ../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o
 ../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/Computer.cpp.o
-../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o
+../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o
 ../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/build.make
 ../bin/NetworkSimulator.exe: CMakeFiles/NetworkSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../bin/NetworkSimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../bin/NetworkSimulator.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NetworkSimulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -177,10 +203,11 @@ CMakeFiles/NetworkSimulator.dir/build: ../bin/NetworkSimulator.exe
 
 .PHONY : CMakeFiles/NetworkSimulator.dir/build
 
+CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
 CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/main.cpp.o.requires
 CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/EventQueue.cpp.o.requires
 CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/Computer.cpp.o.requires
-CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/Globals.cpp.o.requires
+CMakeFiles/NetworkSimulator.dir/requires: CMakeFiles/NetworkSimulator.dir/UnionFind.cpp.o.requires
 
 .PHONY : CMakeFiles/NetworkSimulator.dir/requires
 
@@ -189,6 +216,6 @@ CMakeFiles/NetworkSimulator.dir/clean:
 .PHONY : CMakeFiles/NetworkSimulator.dir/clean
 
 CMakeFiles/NetworkSimulator.dir/depend:
-	cd /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug /cygdrive/c/Users/Victor/ClionProjects/NetworkSimulator/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/Victor/ClionProjects/Simulator_2 /cygdrive/c/Users/Victor/ClionProjects/Simulator_2 /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug /cygdrive/c/Users/Victor/ClionProjects/Simulator_2/cmake-build-debug/CMakeFiles/NetworkSimulator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NetworkSimulator.dir/depend
 
